@@ -6,7 +6,7 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     build-essential \
     nodejs \
-    sqlite3
+    postgresql-client
 
 RUN gem install rake -v 12.3.2 \
   && gem install rails -v 5.2.2 \
