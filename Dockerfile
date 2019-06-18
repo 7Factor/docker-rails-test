@@ -17,4 +17,5 @@ RUN gem install rake -v 12.3.2 \
   && gem install pg -v 1.1.4
 
 RUN service postgresql start \
-  && su postgres -c "psql -c 'create role root with superuser login;'"
+  && su postgres -c "psql -c 'create role root with superuser login;'" \
+  && su postgres -c "psql -c \"ALTER USER postgres PASSWORD 'postgres';\""
